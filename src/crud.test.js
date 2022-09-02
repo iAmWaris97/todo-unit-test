@@ -105,39 +105,3 @@ describe('updateDescription()', () => {
     expect(output).toStrictEqual(expected);
   });
 });
-
-// Unit test to test updateStatus method
-describe('updateStatus()', () => {
-  it('updateStatus method must update todo status to true', () => {
-    // Arrange
-    const todos = [
-      {
-        index: 1,
-        description: 'First',
-        isCompeleted: false,
-      },
-      {
-        index: 2,
-        description: 'Second',
-        isCompeleted: false,
-      },
-    ];
-
-    const expected = [
-      {
-        index: 1,
-        description: 'First',
-        isCompeleted: true,
-      },
-      {
-        index: 2,
-        description: 'Second',
-        isCompeleted: false,
-      },
-    ];
-    // Act
-    const output = storeTodo.updateStatus(1, true, todos);
-    // Assert
-    expect(output).toStrictEqual(expected);
-  });
-});
