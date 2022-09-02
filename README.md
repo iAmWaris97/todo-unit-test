@@ -1,12 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# To Do list: add & remove
+# To Do list: Unit test
 
-> ToDo list to add remove or update a task!
+> In this repo I am testing the TODO list project using jest automatic testing tool!
 
 ![Project Screenshot](./project-snapshot.PNG "Capstone")
 
-I have implemented CRUD operations in this TODO list app.
+I have implemented CRUD operations in this TODO list app, and here I am implementing the unit test for the same.
 
 ## Built With
 
@@ -15,10 +15,11 @@ I have implemented CRUD operations in this TODO list app.
 - JavaScript
 - FontAwesome
 - webpack
+- jest
 
 ## Live Demo
 
-[Live Demo Link](https://iamwaris97.github.io/to-do-list/)
+[Live Demo Link](https://iamwaris97.github.io/todo-unit-test/)
 
 
 ## Getting Started
@@ -49,7 +50,7 @@ I have implemented CRUD operations in this TODO list app.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/iAmWaris97/to-do-list/issues).
+Feel free to check the [issues page](https://github.com/iAmWaris97/todo-unit-test/issues).
 
 ## Show your support
 
