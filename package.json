@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/iAmWaris97/webpack.git"
   },
-  "author": "Waris Haleem",
+  "author": "Waris Haleem and Gustavo Porcilio",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/iAmWaris97/webpack/issues"

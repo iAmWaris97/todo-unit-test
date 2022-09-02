@@ -34,3 +34,38 @@ describe('addTodo()', () => {
     expect(output).toStrictEqual(expected);
   });
 });
+
+// Unit-Test for deleting a task
+describe('removeTodo()', () => {
+  it('removeTodo must remove todo from existing list', () => {
+    // Arrange
+    const todos = [
+      {
+        index: 1,
+        description: 'one',
+        isCompeleted: false,
+      },
+      {
+        index: 2,
+        description: 'two',
+        isCompeleted: true,
+      },
+    ];
+    const tobeDeleted = {
+      index: 2,
+      description: 'two',
+      isCompeleted: true,
+    };
+    const expected = [
+      {
+        index: 1,
+        description: 'one',
+        isCompeleted: false,
+      },
+    ];
+    // Act
+    const output = storeTodo.removeTodo(tobeDeleted.index, todos);
+    // Assert
+    expect(output).toStrictEqual(expected);
+  });
+});
