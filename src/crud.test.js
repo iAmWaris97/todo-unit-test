@@ -1,6 +1,6 @@
 const storeTodo = require('./crud.js');
 
-// Unit test to test saveTodo method
+// Unit test to test addTodo method
 describe('addTodo()', () => {
   it('addTodo must add a todo in the existing list', () => {
     // Arrange
