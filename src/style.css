@@ -48,17 +48,6 @@ form {
   outline: 0;
 }
 
-.add-btn,
-.edit-btn,
-.delete-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-}
-
 #tasks-list {
   padding: 1em;
 }
@@ -67,24 +56,27 @@ form {
   display: flex;
 }
 
-.edit-btn {
+.delete-btn {
   margin-left: auto;
 }
 
-.container-li {
+.item {
   padding: 5px 0;
   border-bottom: 1px solid #eee;
 }
 
-.description {
+.savedItem {
   margin-left: 5px;
+  margin-right: 5px;
   border: 0;
   width: 100%;
   font-size: 14px;
+  padding-left: 3px;
 }
 
-.description:focus {
-  outline: 0;
+.savedItem:focus {
+  outline: 2px solid black;
+  font-weight: bold;
 }
 
 .bottom {
@@ -104,4 +96,15 @@ form {
   color: #413f42;
   background-color: inherit;
   cursor: pointer;
+}
+
+.clear:hover,
+.bottom:hover {
+  background-color: rgb(184, 180, 180);
+  cursor: pointer;
+}
+
+.line {
+  text-decoration: line-through;
+  color: gray;
 }

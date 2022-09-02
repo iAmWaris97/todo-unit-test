@@ -1,40 +1,17 @@
 import './style.css';
+import Todo from './todo.js';
+import storeTodo from './crud.js';
+import updateInterface from './updateUI.js';
 
-import { addTask, crud } from './modules/crud.js';
+const todoInput = document.querySelector('.additem');
 
-const addBtn = document.querySelector('.add-btn');
-const clearCompleted = document.querySelector('.clear');
-const tasksList = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
+updateInterface.displayTodos();
 
-let id = 1;
-addBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (addTask.value !== '') {
-    const task = {
-      description: `${addTask.value}`,
-      completed: false,
-      index: id,
-    };
-    tasksList.push(task);
-
-    const tasks = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
-    tasks.push(task);
-    for (let i = 0; i < tasks.length; i += 1) {
-      tasks[i].index = i + 1;
-    }
-    localStorage.setItem('data', JSON.stringify(tasks));
+todoInput.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    const todoItem = new Todo(0, todoInput.value, false);
+    const todos = storeTodo.saveTodo(todoItem, storeTodo.getTodos());
+    localStorage.setItem('todo', JSON.stringify(todos));
+    updateInterface.displayTodos();
   }
-  id += 1;
-  crud();
-});
-
-clearCompleted.addEventListener('click', (e) => {
-  e.preventDefault();
-  const notDeleted = tasksList.filter((x) => x.completed === false);
-
-  for (let i = 0; i < notDeleted.length; i += 1) {
-    notDeleted[i].index = i + 1;
-  }
-  localStorage.setItem('data', JSON.stringify(notDeleted));
-  crud();
 });
