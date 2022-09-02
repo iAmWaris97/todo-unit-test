@@ -38,13 +38,13 @@ form {
   border-bottom: 1px solid#eee;
 }
 
-#input {
+.additem {
   border: 0;
   width: 100%;
   font-size: 14px;
 }
 
-#input:focus {
+.additem:focus {
   outline: 0;
 }
 
