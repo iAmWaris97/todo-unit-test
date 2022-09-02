@@ -28,11 +28,11 @@ I have implemented CRUD operations in this TODO list app, and here I am implemen
 
 -Clone this repository with
 
-<code>git clone https://github.com/iAmWaris97/to-do-list</code> using your terminal or command line.
+<code>git clone https://github.com/iAmWaris97/todo-unit-test</code> using your terminal or command line.
 
 -Change to the project directory by entering:
 
-<code>cd to-do-list</code> in the terminal.
+<code>cd todo-unit-test</code> in the terminal.
 
 -run <code>code . </code>to open it in VSCode
 
