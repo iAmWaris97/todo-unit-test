@@ -141,3 +141,70 @@ describe('updateStatus()', () => {
     expect(output).toStrictEqual(expected);
   });
 });
+
+// Unit test to test removeCompeletedTodo method
+describe('removeCompeletedTodo()', () => {
+  it('removeCompeletedTodo method must remove tasks that are compeleted', () => {
+    // Arrange
+    const todos = [
+      {
+        index: 1,
+        description: 'First',
+        isCompeleted: false,
+      },
+      {
+        index: 2,
+        description: 'Second',
+        isCompeleted: true,
+      },
+      {
+        index: 3,
+        description: 'Third',
+        isCompeleted: true,
+      },
+    ];
+
+    const expected = [
+      {
+        index: 1,
+        description: 'First',
+        isCompeleted: false,
+      },
+    ];
+    // Act
+    const output = storeTodo.removeCompeletedTodo(todos);
+    // Assert
+    expect(output).toStrictEqual(expected);
+  });
+  it('removeCompeletedTodo must remove tasks that are compeleted and rearrange index number', () => {
+    // Arrange
+    const todos = [
+      {
+        index: 1,
+        description: 'First',
+        isCompeleted: true,
+      },
+      {
+        index: 2,
+        description: 'Second',
+        isCompeleted: false,
+      },
+      {
+        index: 3,
+        description: 'Third',
+        isCompeleted: true,
+      },
+    ];
+    const expected = [
+      {
+        index: 1,
+        description: 'Second',
+        isCompeleted: false,
+      },
+    ];
+    // Act
+    const output = storeTodo.removeCompeletedTodo(todos);
+    // Assert
+    expect(output).toStrictEqual(expected);
+  });
+});
